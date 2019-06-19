@@ -12,7 +12,7 @@
 
 .search__input--character {
   padding: 0 5px;
-  border: 1px solid $colorGrey;
+  border: 1px solid $color_grey;
   border-right: none;
   box-sizing: border-box;
   border-radius: 3px 0 0 3px;
@@ -21,10 +21,10 @@
   @media all and (min-width: 768px) {
     width: 200px;
   }
-  background-color: $colorLightPink;
+  background-color: $color_primary;
   transition: background-color ease 1s;
   &:focus {
-    background-color: $colorWhite;
+    background-color: $color_white;
     outline-width: 0;
   }
 }
@@ -33,20 +33,22 @@
   border: none;
   width: 30px;
   height: 30px;
-  background-color: $colorButton;
+  background-color: $color_button;
   border-radius: 0 3px 3px 0;
   cursor: pointer;
   &:focus {
     outline-width: 0;
   }
-  &:active {
-    background-color: $colorDarkPink;
+  &:hover {
     .fa-search {
-      color: $colorBlack;
+      color: $color_dark_grey;
     }
+  }
+  &:active {
+    box-shadow: inset 0 0 10px $color_grey;
   }
 }
 
 .fa-search {
-  color: $colorPrimary;
+  color: $color_primary;
 }
