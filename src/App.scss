@@ -3,5 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: $colorPrimary;
+  font-family: $font_family;
+  background-color: $color_primary;
+  color: $color_secondary;
 }

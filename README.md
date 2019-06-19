@@ -1,6 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Welcome to the Marvel characters searcher!!
 
-## Marvel characters searcher!!
+## What is this APP for...
 :)
 
 ## Attribution
@@ -20,6 +20,7 @@ Necesitas key, timestamp (ts) y hash para peticiones https://developer.marvel.co
 catch error?
 
 ## Structure
+`
 |_src
   |_App
 
@@ -34,20 +35,23 @@ catch error?
   |_styles
     |_core
       |_variables
+`
 
 Global state controlled from App.js
 
 ## Dependencies and technologies
 Petitions
--Postman help
+*Postman help
 
 Developement(?)
--Métodos de vida: component did mount, etc
--React Router
+*This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*Métodos de vida: component did mount, etc
+*React Router
 
 Maquetación
--SASS
--Responsive with Mobile first
+*SASS
+*Use of BEM for class naming
+*Responsive with Mobile first
 
 ## Dificultades
 
