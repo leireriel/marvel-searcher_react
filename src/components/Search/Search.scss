@@ -3,7 +3,7 @@
 .search__character--wrapper {
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  padding: 20px 0;
 }
 
 .search__label--character {
@@ -43,9 +43,6 @@
     .fa-search {
       color: $color_dark_grey;
     }
-  }
-  &:active {
-    box-shadow: inset 0 0 10px $color_grey;
   }
 }
 

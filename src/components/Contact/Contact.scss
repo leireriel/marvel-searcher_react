@@ -1,0 +1,11 @@
+@import '../../styles/core/variables';
+
+.contact__wrapper {
+  background-color: $color_secondary;
+  height: 100%;
+  color: $color_primary;
+}
+
+.contact__description {
+  margin: 0;
+}

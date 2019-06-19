@@ -5,7 +5,7 @@ class CharacterList extends Component {
   render() {
     return(
       <Fragment>
-        <p>CharacterList</p>
+        <p className="temporal">CharacterList</p>
       </Fragment>
     );
   }

@@ -3,6 +3,7 @@ import { fetchCharacters } from './services/fetchCharacters';
 import Search from './components/Search';
 import CharacterList from './components/CharacterList';
 import CharacterDetail from './components/CharacterDetail';
+import Contact from './components/Contact';
 import { Switch, Route } from 'react-router-dom';
 import './App.scss';
 
@@ -29,7 +30,7 @@ class App extends Component {
     return (
       <Fragment>
         <header />
-        <main>
+        <main className="main__marvel">
           <Switch>
 
             <Route exact path="/" render={() =>
@@ -39,7 +40,7 @@ class App extends Component {
               </Fragment>
             }/>
 
-            <Route path="/detail/:character" render={paramPicker =>
+            <Route path="/character/:character" render={paramPicker =>
               <CharacterDetail
                 param={parseInt(paramPicker.match.params.character)}
               />
@@ -47,7 +48,9 @@ class App extends Component {
 
           </Switch>
         </main>
-        <footer />
+        <footer className="footer__marvel">
+          <Contact />
+        </footer>
       </Fragment>
     );
   }

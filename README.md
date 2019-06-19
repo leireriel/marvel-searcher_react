@@ -31,6 +31,7 @@ catch error?
     |_Search
     |_CharacterList
     |_CharacterDetail
+    |_Contact
   
   |_styles
     |_core
