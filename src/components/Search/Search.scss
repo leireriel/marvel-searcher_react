@@ -1,1 +1,52 @@
 @import '../../styles/core/variables';
+
+.search__character--wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search__label--character {
+  display: none;
+}
+
+.search__input--character {
+  padding: 0 5px;
+  border: 1px solid $colorGrey;
+  border-right: none;
+  box-sizing: border-box;
+  border-radius: 3px 0 0 3px;
+  height: 30px;
+  width: 140px;
+  @media all and (min-width: 768px) {
+    width: 200px;
+  }
+  background-color: $colorLightPink;
+  transition: background-color ease 1s;
+  &:focus {
+    background-color: $colorWhite;
+    outline-width: 0;
+  }
+}
+
+.search__button--character {
+  border: none;
+  width: 30px;
+  height: 30px;
+  background-color: $colorButton;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  &:focus {
+    outline-width: 0;
+  }
+  &:active {
+    background-color: $colorDarkPink;
+    .fa-search {
+      color: $colorBlack;
+    }
+  }
+}
+
+.fa-search {
+  color: $colorPrimary;
+}
