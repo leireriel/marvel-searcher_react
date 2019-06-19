@@ -27,9 +27,13 @@ catch error?
     |_fetchCharacters
 
   |_components
-    |_Filters
+    |_Search
     |_CharacterList
     |_CharacterDetail
+  
+  |_styles
+    |_core
+      |_variables
 
 Global state controlled from App.js
 
