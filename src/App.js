@@ -15,13 +15,45 @@ class App extends Component {
       results: []
     }
     this.getCharactersFromAPI = this.getCharactersFromAPI.bind(this);
+    this.promiseCharacter = this.promiseCharacter.bind(this);
+  }
+
+  promiseCharacter(obj) {
+    return (fetch(obj)
+      .then(res => res.json()))
+      .then(character => {
+        return({
+          id: character.id,
+          heroName: character.names.hero_name,
+          realName: character.names.real_name,
+          group: character.group,
+          measures: character.measures,
+          text: character.abstract,
+          comics: character.comics,
+          father: character.father,
+          image: character.avatar,
+          dob: character.dob
+        })
+      })
   }
 
   getCharactersFromAPI(event) {
     event.preventDefault();
-    fetchCharacters('Sp')
-      .then(data => {
-        console.log(data)
+    //fetchCharacters('Spider')
+    fetchCharacters()
+    .then(data => {
+      let promises = [];
+      data.characters.map(character => {
+        return (
+          promises.push(this.promiseCharacter(character))
+        )
+      })
+      Promise.all(promises)
+        .then(responses => {
+          this.setState({
+            results: responses
+          })
+        })
       })
       .catch(error => console.log(`Ha sucedido un error: ${error}`));
   }

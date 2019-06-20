@@ -22,6 +22,7 @@ catch error?`
 --
 API timeout
 Mock json
+images of characters from https://www.marvel.com/explore
 
 ## Structure
 ```
@@ -58,6 +59,7 @@ Maquetación
 *SASS
 *Use of BEM for class naming
 *Responsive with Mobile first
+*Flexbox
 
 ## Dificultades
 
