@@ -17,10 +17,14 @@ See how on https://developer.marvel.com/documentation/getting_started
 Necesitas key, timestamp (ts) y hash para peticiones https://developer.marvel.com/documentation/authorization
 
 
-catch error?
+catch error?`
+
+--
+API timeout
+Mock json
 
 ## Structure
-`
+```
 |_src
   |_App
 
@@ -36,7 +40,7 @@ catch error?
   |_styles
     |_core
       |_variables
-`
+```
 
 Global state controlled from App.js
 or state in new component fetch, that contains both search and characterlist
