@@ -56,6 +56,7 @@ Developement(?)
 *Métodos de vida: component did mount, etc
 *React Router
 *PropTypes
+*? to fetch local json
 
 Maquetación
 *SASS
@@ -69,7 +70,7 @@ mapeo en fetch
 funciones arrow en componentes
 sort
 button con mixing
-cambiar nombre service fetch
+fetch to local json
 ---
 
 ## Dificultades

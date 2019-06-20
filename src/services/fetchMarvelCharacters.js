@@ -1,19 +1,26 @@
-//const ts = 'salt';
-//const key = 'e7e74822fd1be04b0041a481dfb22e30';
-//const hash = 'ceba5a59dc7760abe5b48432f07e77b8';
-//const ENDPOINT = character => `http://gateway.marvel.com/v1/public/characters?limit=12&nameStartsWith=${character}&ts=${ts}&apikey=${key}&hash=${hash}`;
+/*API MARVEL
+const ts = 'salt';
+const key = 'e7e74822fd1be04b0041a481dfb22e30';
+const hash = 'ceba5a59dc7760abe5b48432f07e77b8';
+const ENDPOINT = character => `http://gateway.marvel.com/v1/public/characters?limit=12&nameStartsWith=${character}&ts=${ts}&apikey=${key}&hash=${hash}`;
 
-//const fetchMarvelCharacters = character => fetch(ENDPOINT(character)).then(res => res.json())
+const fetchMarvelCharacters = character => fetch(ENDPOINT(character)).then(res => res.json())
 
-
-const ENDPOINT = 'http://www.mocky.io/v2/5d0b910f2f00007300e3f1c9';
+const fetchMarvelCharacters = character => {
+  return (
+    fetch(ENDPOINT(character))
+      .then(res => res.json())
+      .then(data => data.xx.map(character => mapToCharacter(character)))
+  );
+}*/
 
 const fetchMarvelCharacters = () => {
-  return (
-    fetch(ENDPOINT)
-      .then(res => res.json())
-      .then(data => data.characters.map(mapToCharacter))
-  );
+  const mockedFetch = new Promise(resolve => {
+    const data = require('./mockCharacters.json');
+    resolve(data);
+  });
+  return mockedFetch
+    .then(data => data.characters.map(character => mapToCharacter(character)));
 }
 
 const mapToCharacter = character => {
