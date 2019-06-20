@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import Search from '../Search';
-import CharacterList from '../CharacterList';
 import { fetchCharacters } from '../../services/fetchCharacters';
+import FilteredCharacter from '../Filters/FilteredCharacter';
 
 class FetchCharacters extends Component {
   constructor(props) {
@@ -55,8 +54,7 @@ class FetchCharacters extends Component {
   render() {
     return(
       <Fragment>
-        <Search actionForm={this.getCharactersFromAPI}/>
-        <CharacterList />
+        <FilteredCharacter actionFetch={this.getCharactersFromAPI}/>
       </Fragment>
     );
   }
