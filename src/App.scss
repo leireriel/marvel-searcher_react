@@ -7,3 +7,13 @@ body {
   background-color: $color_primary;
   color: $color_secondary;
 }
+
+.main__marvel {
+  height: 95vh;
+}
+
+.footer__marvel {
+  height: 5vh;
+  width: 100%;
+  position: fixed;
+}

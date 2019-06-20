@@ -7,10 +7,13 @@ $color_black: black;
 $color_pink: deeppink;
 $color_dark_pink: rgb(139, 45, 89);
 
+//Colors for actions
 $color_primary: $color_dirty;
 $color_secondary: $color_dark_grey;
 $color_button: $color_pink;
+$color_active_button: $color_dark_pink;
 $color_link: $color_dark_pink;
+$color_light_link: $color_pink;
 
 //Typography
 $font_family: 'Roboto', sans-serif;
@@ -20,6 +23,10 @@ $font_weight_regular: 400;
 $font_weight_medium: 500;
 $font_weight_bold: 700;
 
-$font_size_small: 14px;
+$font_size_small: 12px;
 $font_size_medium: 16px;
 $font_size_title: 18px;
+
+//Break points
+$bp_tablet: 768px;
+$bp_desktop: 1280px;

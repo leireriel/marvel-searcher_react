@@ -3,7 +3,7 @@
 .search__character--wrapper {
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  padding: 20px 0;
 }
 
 .search__label--character {
@@ -18,7 +18,7 @@
   border-radius: 3px 0 0 3px;
   height: 30px;
   width: 140px;
-  @media all and (min-width: 768px) {
+  @media all and (min-width: $bp_tablet) {
     width: 200px;
   }
   background-color: $color_primary;
@@ -40,12 +40,7 @@
     outline-width: 0;
   }
   &:hover {
-    .fa-search {
-      color: $color_dark_grey;
-    }
-  }
-  &:active {
-    box-shadow: inset 0 0 10px $color_grey;
+    background-color: $color_dark_pink;
   }
 }
 
