@@ -18,7 +18,7 @@
   border-radius: 3px 0 0 3px;
   height: 30px;
   width: 140px;
-  @media all and (min-width: 768px) {
+  @media all and (min-width: $bp_tablet) {
     width: 200px;
   }
   background-color: $color_primary;
@@ -40,9 +40,7 @@
     outline-width: 0;
   }
   &:hover {
-    .fa-search {
-      color: $color_dark_grey;
-    }
+    background-color: $color_dark_pink;
   }
 }
 
