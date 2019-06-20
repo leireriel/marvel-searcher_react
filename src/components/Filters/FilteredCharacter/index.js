@@ -12,18 +12,25 @@ class FilteredCharacter extends Component {
   }
 
   filterCharacter(event) {
-    const searchValue = event.currentTarget.value;
+    const searchValue = event.currentTarget.value.toLowerCase();
     this.setState({
       value: searchValue
     })
   }
 
   render() {
-    const { actionFetch } = this.props;
+    const { value } = this.state;
+    const { actionFetch, allCharacters } = this.props;
     return(
       <Fragment>
         <Search actionFetch={actionFetch} actionFilter={this.filterCharacter}/>
-        <CharacterList />
+        <CharacterList 
+          charactersFound={
+            allCharacters
+              .filter(character => character.heroName.toLowerCase().includes(value))
+              //.sort(character.heroName) 
+          }
+        />
       </Fragment>
     );
   }

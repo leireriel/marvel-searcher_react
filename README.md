@@ -23,6 +23,7 @@ catch error?`
 API timeout
 Mock json
 images of characters from https://www.marvel.com/explore
+nunca lo había hecho
 
 ## Structure
 ```
@@ -54,12 +55,22 @@ Developement(?)
 *This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 *Métodos de vida: component did mount, etc
 *React Router
+*PropTypes
 
 Maquetación
 *SASS
 *Use of BEM for class naming
 *Responsive with Mobile first
 *Flexbox
+*Scroll horizontal para imagenes con librería? En vista ppal
+
+---
+mapeo en fetch
+funciones arrow en componentes
+sort
+button con mixing
+cambiar nombre service fetch
+---
 
 ## Dificultades
 

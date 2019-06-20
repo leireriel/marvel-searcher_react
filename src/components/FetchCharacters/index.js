@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { fetchCharacters } from '../../services/fetchCharacters';
+import { fetchMarvelCharacters } from '../../services/fetchMarvelCharacters';
 import FilteredCharacter from '../Filters/FilteredCharacter';
 
 class FetchCharacters extends Component {
@@ -8,53 +8,29 @@ class FetchCharacters extends Component {
     this.state = {
       allCharacters: []
     }
-    this.getCharactersFromAPI = this.getCharactersFromAPI.bind(this);
-    this.promiseCharacter = this.promiseCharacter.bind(this);
+    this.getCharacters = this.getCharacters.bind(this);
   }
 
-  promiseCharacter(character) {
-    return (
-      {
-        id: character.id,
-        heroName: character.names.hero_name,
-        realName: character.names.real_name,
-        group: character.group,
-        measures: character.measures,
-        text: character.abstract,
-        comics: character.comics,
-        father: character.father,
-        image: character.avatar,
-        dob: character.dob
-      }
-    );
-  }
-
-  getCharactersFromAPI(event) {
+  getCharacters(event) {
     event.preventDefault();
-    const promiseCharacter = this.promiseCharacter;
-    //fetchCharacters('Spider')
-    fetchCharacters()
-    .then(data => {
-      let promises = [];
-      data.characters.map(character => {
-        return (
-          promises.push(promiseCharacter(character))
-        );
-      })
-      Promise.all(promises)
-      .then(responses => {
+    //fetchMarvelCharacters('Spider')
+    fetchMarvelCharacters()
+      .then(data => {
         this.setState({
-          allCharacters: responses
+          allCharacters: data
         })
       })
-    })
-    .catch(error => console.log(`Ha sucedido un error: ${error}`));
+      .catch(error => console.log(`Ha sucedido un error: ${error}`));
   }
 
   render() {
+    const { allCharacters } = this.state;
     return(
       <Fragment>
-        <FilteredCharacter actionFetch={this.getCharactersFromAPI}/>
+        <FilteredCharacter 
+          actionFetch={this.getCharacters}
+          allCharacters={allCharacters}
+        />
       </Fragment>
     );
   }
