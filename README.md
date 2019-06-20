@@ -39,6 +39,7 @@ catch error?
 `
 
 Global state controlled from App.js
+or state in new component fetch, that contains both search and characterlist
 
 ## Dependencies and technologies
 Petitions
