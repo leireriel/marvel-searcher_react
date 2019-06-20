@@ -12,16 +12,15 @@ const fetchMarvelCharacters = character => {
       .then(res => res.json())
       .then(data => data.xx.map(character => mapToCharacter(character)))
   );
-}*/
+};*/
 
-const fetchMarvelCharacters = () => {
+const loadJson = () => {
   const mockedFetch = new Promise(resolve => {
     const data = require('./mockCharacters.json');
     resolve(data);
   });
-  return mockedFetch
-    .then(data => data.characters.map(character => mapToCharacter(character)));
-}
+  return mockedFetch;
+};
 
 const mapToCharacter = character => {
   return (
@@ -30,14 +29,36 @@ const mapToCharacter = character => {
       heroName: character.names.hero_name,
       text: character.abstract,
       image: character.avatar
-      //realName: character.names.real_name,
-      //group: character.group,
-      //measures: character.measures,
-      //comics: character.comics,
-      //father: character.father,
-      //dob: character.dob
     }
   );
-}
+};
 
-export {fetchMarvelCharacters};
+const mapToSingleCharacter = character => {
+  return (
+    {
+      id: character.id,
+      heroName: character.names.hero_name,
+      text: character.abstract,
+      image: character.avatar,
+      realName: character.names.real_name,
+      group: character.group,
+      measures: character.measures,
+      comics: character.comics,
+      father: character.father,
+      dob: character.dob
+    }
+  );
+};
+
+const fetchMarvelCharacters = () => {
+  return loadJson()
+    .then(data => data.characters.map(character => mapToCharacter(character)));
+};
+
+const fetchMarvelSingleCharacter = id => {
+  return loadJson()
+    .then(data => data.characters.filter(character => character.id === id)
+    .map(character => mapToSingleCharacter(character)));
+};
+
+export {fetchMarvelCharacters, fetchMarvelSingleCharacter};
