@@ -6,7 +6,7 @@
 //const fetchCharacters = character => fetch(ENDPOINT(character)).then(res => res.json())
 
 
-const ENDPOINT = 'http://www.mocky.io/v2/5d0b81a22f00006b00e3f154';
+const ENDPOINT = 'http://www.mocky.io/v2/5d0b910f2f00007300e3f1c9';
 
 const fetchCharacters = () => fetch(ENDPOINT).then(res => res.json())
 

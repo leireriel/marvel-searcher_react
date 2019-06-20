@@ -18,30 +18,45 @@ class App extends Component {
     this.promiseCharacter = this.promiseCharacter.bind(this);
   }
 
-  promiseCharacter(obj) {
-    return (fetch(obj)
-      .then(res => res.json()))
-      .then(character => {
-        return({
-          id: character.id,
-          heroName: character.names.hero_name,
-          realName: character.names.real_name,
-          group: character.group,
-          measures: character.measures,
-          text: character.abstract,
-          comics: character.comics,
-          father: character.father,
-          image: character.avatar,
-          dob: character.dob
-        })
-      })
+  promiseCharacter(character) {
+    return (
+      {
+        id: character.id,
+        heroName: character.names.hero_name,
+        realName: character.names.real_name,
+        group: character.group,
+        measures: character.measures,
+        text: character.abstract,
+        comics: character.comics,
+        father: character.father,
+        image: character.avatar,
+        dob: character.dob
+      }
+    );
   }
 
   getCharactersFromAPI(event) {
     event.preventDefault();
     //fetchCharacters('Spider')
+    const promiseCharacter = this.promiseCharacter;
     fetchCharacters()
     .then(data => {
+      let promises = [];
+      data.characters.map(character => {
+        return (
+          promises.push(promiseCharacter(character))
+        );
+      })
+      Promise.all(promises)
+      .then(responses => {
+        this.setState({
+          results: responses
+        })
+      })
+    })
+    .catch(error => console.log(`Ha sucedido un error: ${error}`));
+
+    /*.then(data => {
       let promises = [];
       data.characters.map(character => {
         return (
@@ -54,8 +69,10 @@ class App extends Component {
             results: responses
           })
         })
+        console.log(promises)
       })
       .catch(error => console.log(`Ha sucedido un error: ${error}`));
+      */
   }
 
   render() {
