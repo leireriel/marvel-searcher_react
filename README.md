@@ -61,17 +61,15 @@ It was a challenge for me to make requests to an API using **authentication** (a
 * [node-sass](https://www.npmjs.com/package/node-sass) - For the use of SCSS in the project
 
 ## 👩🏼‍💻 Technologies
-1. API
+API
 * [Postman](https://www.getpostman.com/) to make petitions to API
 
-
-2. Programming (JS / React)
+Programming (JS / React)
 * Use of some **React component lifecycle** methods
 * Use of **React Router** to simulate pages
 * Use of **React PropTypes**
 
-
-3. Layout
+Layout
 * **SASS**
 * **Variables, mixins, animations and transitions**
 * **Responsive** design 
