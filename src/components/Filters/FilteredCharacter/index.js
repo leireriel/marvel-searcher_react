@@ -14,11 +14,14 @@ class FilteredCharacter extends Component {
   }
   
   shouldComponentUpdate() {
-    if (this.state.clickedButton === true) {
+    if (this.state.clickedButton) {
+      console.log('true')
       return true;
     } else {
+      console.log('false')
       return false;
     }
+    //Problema de asincronía
   }
 
   handleValue(event) {
@@ -43,7 +46,7 @@ class FilteredCharacter extends Component {
     return(
       <Fragment>
         <Search actionButton={this.handleCLickButton} actionValue={this.handleValue}/>
-        {clickedButton ?
+        {clickedButton & value !== '' ?
           <CharacterList 
             value={value}
             clickedButton={clickedButton}
@@ -53,6 +56,9 @@ class FilteredCharacter extends Component {
                 .sort((a, b) => (a.heroName > b.heroName) ? 1 : ((b.heroName > a.heroName)) ? -1 : 0)
             }
           />
+          :
+          clickedButton & value === '' ?
+          <p>Escribe algo :)</p>
           :
           null
         }

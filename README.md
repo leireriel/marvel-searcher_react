@@ -76,6 +76,8 @@ renderizar lista solo cuando doy al botón
 o que el value solo se guarde cuando doy al botón
 esto es nuevo para mi
 
+boton para ver todos los caracterres, y el normal que devuelva vacio si no hay nada en input
+
 ---
 
 ## Dificultades
