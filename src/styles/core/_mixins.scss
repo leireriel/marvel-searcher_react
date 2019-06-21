@@ -13,3 +13,17 @@
     background-color: $color_dark_pink;
   }
 }
+
+@mixin attenuate {
+  animation-name: attenuate;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  @keyframes attenuate {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

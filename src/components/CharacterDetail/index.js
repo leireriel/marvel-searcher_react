@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import { fetchMarvelSingleCharacter } from '../../services/fetchMarvelCharacters';
 import NavDetail from './components/NavDetail';
 import PaintDetail from './components/PaintDetail';
-import './CharacterDetail.scss';
 
 class CharacterDetail extends Component {
   constructor(props) {

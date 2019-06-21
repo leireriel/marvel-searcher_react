@@ -1,0 +1,35 @@
+@import '../../../../styles/core/variables';
+@import '../../../../styles/core/mixins';
+
+.detail__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include attenuate;
+  @media all and (min-width: $bp_tablet) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.detail__image {
+  width: 230px;
+  @media all and (min-width: $bp_tablet) {
+    width: 300px;
+  }
+  border-radius: 5px;
+  box-shadow: 0 0 10px $color_grey;
+}
+
+.detail__common--text {
+  font-size: $font_size_medium;
+  font-weight: $font_weight_regular;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.detail__common--list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
