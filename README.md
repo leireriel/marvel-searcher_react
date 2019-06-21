@@ -64,10 +64,12 @@ It was a challenge for me to make requests to an API using **authentication** (a
 1. API
 * [Postman](https://www.getpostman.com/) to make petitions to API
 
+
 2. Programming (JS / React)
 * Use of some **React component lifecycle** methods
 * Use of **React Router** to simulate pages
 * Use of **React PropTypes**
+
 
 3. Layout
 * **SASS**
