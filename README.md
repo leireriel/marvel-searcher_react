@@ -78,15 +78,15 @@ Layout
 * Use of **BEM** for class naming
 
 ## 💡 To Do
-* **Better control the rendering**. Render the list of characters in CharacterList component only when the button is clicked. I think I'm having some kind of *asynchrony* with the state when clicking the button (double answer receipt). shouldComponentUpdate should work, but I think it's making a delay because of this docuble answer.
-* Make it possible to **click the "Ver todos los personajes" button in first place**. It only works if we have clicked first the small one.
-* Improve **organization of components** for first route (includes components FetchCharacters, FilteredCharacter, Search and CharacterList). Maybe this components should be organized in hierarchy, instead of in the same level. I need to document about strategies to organize components.
-* Real **fetch to Marvel API**.
-* **Horizontal scroll** to see the characters in the list component.
+1. **Better control the rendering**. Render the list of characters in CharacterList component only when the button is clicked. I think I'm having some kind of *asynchrony* with the state when clicking the button (double answer receipt). shouldComponentUpdate should work, but I think it's making a delay because of this docuble answer.
+2. Make it possible to **click the "Ver todos los personajes" button in first place**. It only works if we have clicked first the small one.
+3. Improve **organization of components** for first route (includes components FetchCharacters, FilteredCharacter, Search and CharacterList). Maybe this components should be organized in hierarchy, instead of in the same level. I need to document about strategies to organize components.
+4. Real **fetch to Marvel API**.
+5. **Horizontal scroll** to see the characters in the list component.
 
 ## 👨‍🏫 Attribution
-1. Images of characters are from [Marvel website](https://www.marvel.com/explore).
-2. Favicon got in [IconArchive](http://www.iconarchive.com/show/ultrabuuf-icons-by-mattahan/Comics-Spiderwoman-icon.html).
+* Images of characters are from [Marvel website](https://www.marvel.com/explore).
+* Favicon got in [IconArchive](http://www.iconarchive.com/show/ultrabuuf-icons-by-mattahan/Comics-Spiderwoman-icon.html).
 
 # 🤜🤛 Contributing
 All suggestions are welcome, please open an issue.
