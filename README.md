@@ -10,7 +10,7 @@ Because the API was down during the days I did this project, I decided to mock a
 
 ## 🏗 Getting Started
 Install [Node.js](https://nodejs.org/), and then:
-1. `$ git clone https://github.com/leireriel/marvel-searcher-react.git` to clone the repository
+1. `$ git clone https://github.com/leireriel/marvel-searcher_react.git` to clone the repository
 2. `$ npm install` to install dependencies 
 3. `$ npm start` to run the project in your browser 
 
