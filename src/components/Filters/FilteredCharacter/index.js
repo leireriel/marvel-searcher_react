@@ -46,6 +46,7 @@ class FilteredCharacter extends Component {
   }
 
   handleClickButtonAll() {
+    this.props.actionFetch();
     this.setState({
       clickedAllButton: true,
       clickedButton: false
@@ -55,6 +56,15 @@ class FilteredCharacter extends Component {
   render() {
     const { value, clickedButton, clickedAllButton } = this.state;
     const { allCharacters } = this.props;
+    const charactersFound =
+      allCharacters
+      .filter(character => character.heroName.toLowerCase().includes(value))
+      .sort((a, b) => (a.heroName > b.heroName) ? 1 : ((b.heroName > a.heroName)) ? -1 : 0)
+    ;
+    const charactersFoundAll =
+      allCharacters
+        .sort((a, b) => (a.heroName > b.heroName) ? 1 : ((b.heroName > a.heroName)) ? -1 : 0)
+    ;
     return(
       <Fragment>
         <Search 
@@ -66,11 +76,7 @@ class FilteredCharacter extends Component {
           <CharacterList 
             value={value}
             clickedButton={clickedButton}
-            charactersFound={
-              allCharacters
-                .filter(character => character.heroName.toLowerCase().includes(value))
-                .sort((a, b) => (a.heroName > b.heroName) ? 1 : ((b.heroName > a.heroName)) ? -1 : 0)
-            }
+            charactersFound={charactersFound}
           />
           :
           clickedButton & value === '' ?
@@ -81,10 +87,7 @@ class FilteredCharacter extends Component {
           :
           clickedAllButton ?
           <CharacterList 
-            charactersFound={
-              allCharacters
-                .sort((a, b) => (a.heroName > b.heroName) ? 1 : ((b.heroName > a.heroName)) ? -1 : 0)
-            }
+            charactersFound={charactersFoundAll}
           />
           :
           null
