@@ -7,9 +7,9 @@ const NavDetail = ({ id, title }) => {
     <div className="nav__detail--wrapper">
       <h1 className="nav__detail--title">{title}</h1>
       <nav>
-        <ol>
-          <li>Estás viendo al personaje número {id}</li>
-          <li>
+        <ol className="nav__detail--navigation">
+          <li className="nav__detail--item">Estás viendo al personaje número {id}</li>
+          <li className="nav__detail--item">
             <Link className="nav__detail--back" to="/">
               Volver
             </Link>

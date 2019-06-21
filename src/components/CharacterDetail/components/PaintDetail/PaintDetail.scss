@@ -5,6 +5,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0 20px 80px;
   @include attenuate;
   @media all and (min-width: $bp_tablet) {
     flex-direction: row;
@@ -26,10 +29,21 @@
   font-weight: $font_weight_regular;
   margin: 0;
   padding: 10px 0;
+  @media all and (min-width: $bp_tablet) {
+    font-size: $font_size_big;
+    padding: 20px 0;
+  }
 }
 
 .detail__common--list {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.detail__text--wrapper {
+  padding: 20px 0 0 0;
+  @media all and (min-width: $bp_tablet) {
+    padding: 0 0 0 60px;
+  }
 }

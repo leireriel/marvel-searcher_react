@@ -7,7 +7,7 @@ const PaintDetail = ({ characterToRender }) => {
       {characterToRender
         .map(character => {
           return (
-            <ol key={character.id} className="detail__list detail__common--list">
+            <ol key={character.id} className="detail__list">
               <li className="detail__image--wrapper">
                 <img src={character.image} alt={character.heroName} className="detail__image"/>
               </li>

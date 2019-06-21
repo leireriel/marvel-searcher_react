@@ -1,3 +1,38 @@
+@import '../../../../styles/core/variables';
+@import '../../../../styles/core/mixins';
+
+.nav__detail--wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  @media all and (min-width: $bp_tablet) {
+    flex-direction: column;
+  }
+}
+
 .nav__detail--title {
+  font-size: $font_size_big_title;
+  text-align: center;
   margin: 0;
+  padding: 20px 0;
+  @media all and (min-width: $bp_tablet) {
+    padding: 40px 0 0 0;
+  }
+}
+
+.nav__detail--navigation {
+  list-style: none;
+  border: 0;
+  padding: 0 20px;
+  font-size: $font_size_small;
+}
+
+.nav__detail--item {
+  &:nth-child(even) {
+    padding-top: 10px;
+  }
+}
+
+.nav__detail--back {
+  text-decoration: none;
+  @include button-style ($color_button, $color_primary);
 }
