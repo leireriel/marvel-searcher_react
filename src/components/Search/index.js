@@ -1,7 +1,7 @@
 import React from 'react';
 import './Search.scss';
 
-const Search = ({ actionButton, actionValue }) => {
+const Search = ({ actionButton, actionValue, actionButtonAll }) => {
   return(
     <div className="search__character--wrapper">
       <div className="search__single--wrapper">
@@ -16,7 +16,7 @@ const Search = ({ actionButton, actionValue }) => {
         </button>
       </div>
       <div className="search__all--wrapper">
-        <button className="search__button--allcharacters">Ver todos los personajes</button>
+        <button className="search__button--allcharacters" onClick={actionButtonAll}>Ver todos los personajes</button>
       </div>
     </div>
   );

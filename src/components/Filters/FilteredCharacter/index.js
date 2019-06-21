@@ -8,10 +8,12 @@ class FilteredCharacter extends Component {
     super(props);
     this.state = {
       value: '',
-      clickedButton: false
+      clickedButton: false,
+      clickedAllButton: false
     };
     this.handleValue = this.handleValue.bind(this);
     this.handleCLickButton = this.handleCLickButton.bind(this);
+    this.handleClickButtonAll = this.handleClickButtonAll.bind(this);
   }
   
   shouldComponentUpdate() {
@@ -29,7 +31,8 @@ class FilteredCharacter extends Component {
     const searchValue = event.currentTarget.value.toLowerCase();
     this.setState({
       value: searchValue,
-      clickedButton: false
+      clickedButton: false,
+      clickedAllButton: false
     });
   }
   
@@ -37,16 +40,28 @@ class FilteredCharacter extends Component {
     event.preventDefault();
     this.props.actionFetch();
     this.setState({
-      clickedButton: true
+      clickedButton: true,
+      clickedAllButton: false
+    });
+  }
+
+  handleClickButtonAll() {
+    this.setState({
+      clickedAllButton: true,
+      clickedButton: false
     });
   }
 
   render() {
-    const { value, clickedButton } = this.state;
+    const { value, clickedButton, clickedAllButton } = this.state;
     const { allCharacters } = this.props;
     return(
       <Fragment>
-        <Search actionButton={this.handleCLickButton} actionValue={this.handleValue}/>
+        <Search 
+          actionButton={this.handleCLickButton} 
+          actionValue={this.handleValue}
+          actionButtonAll={this.handleClickButtonAll}
+        />
         {clickedButton & value !== '' ?
           <CharacterList 
             value={value}
@@ -63,6 +78,14 @@ class FilteredCharacter extends Component {
             Escribe algo
             <span role="img" aria-label="friendly face">😉</span>
           </p>
+          :
+          clickedAllButton ?
+          <CharacterList 
+            charactersFound={
+              allCharacters
+                .sort((a, b) => (a.heroName > b.heroName) ? 1 : ((b.heroName > a.heroName)) ? -1 : 0)
+            }
+          />
           :
           null
         }

@@ -2,10 +2,7 @@ import React from 'react';
 import './CharacterList.scss';
 
 const CharacterList = ({ value, clickedButton, charactersFound }) => {
-  return(
-    charactersFound.length === 0 & value !== '' & clickedButton ?
-    <p className="character__not--found">¡Prueba con otro!</p>
-    :
+  const paintCharacters =
     <ol className="character__list">
       {charactersFound
         .map(character => {
@@ -23,6 +20,11 @@ const CharacterList = ({ value, clickedButton, charactersFound }) => {
         })
       }
     </ol>
+  return(
+    charactersFound.length === 0 & value !== '' & clickedButton ?
+    <p className="character__not--found">¡Prueba con otro!</p>
+    :
+    paintCharacters
   );
 };
 

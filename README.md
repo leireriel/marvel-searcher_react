@@ -42,6 +42,7 @@ nunca lo había hecho
   |_styles
     |_core
       |_variables
+      |_mixins
 ```
 
 Global state controlled from App.js
