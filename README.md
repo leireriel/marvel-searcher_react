@@ -79,6 +79,12 @@ esto es nuevo para mi
 
 boton para ver todos los caracterres, y el normal que devuelva vacio si no hay nada en input
 
+TO IMPROVE (asynchrony???):
+
+1. The button to see all characters only works after pressing the other button.
+2. Avoid render every time the user is typing. It has to happen just when user press button.
+shouldComponentUpdate should work, but it's making a delay. I think it's something about asynchrony.
+
 ---
 
 ## Dificultades
