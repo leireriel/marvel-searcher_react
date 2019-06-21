@@ -4,7 +4,7 @@ import './CharacterList.scss';
 const CharacterList = ({ value, clickedButton, charactersFound }) => {
   return(
     charactersFound.length === 0 & value !== '' & clickedButton ?
-    <p>¡Prueba con otro!</p>
+    <p className="character__not--found">¡Prueba con otro!</p>
     :
     <ol className="character__list">
       {charactersFound

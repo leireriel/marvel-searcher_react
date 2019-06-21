@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Search from '../../Search';
 import CharacterList from '../../CharacterList';
+import './FilteredCharacter.scss';
 
 class FilteredCharacter extends Component {
   constructor(props) {
@@ -58,7 +59,10 @@ class FilteredCharacter extends Component {
           />
           :
           clickedButton & value === '' ?
-          <p>Escribe algo :)</p>
+          <p className="error__text">
+            Escribe algo
+            <span role="img" aria-label="friendly face">😉</span>
+          </p>
           :
           null
         }

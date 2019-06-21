@@ -1,0 +1,15 @@
+@mixin button-style ($color, $color-text) {
+  border: none;
+  height: 30px;
+  padding: 0 10px;
+  background-color: $color;
+  border-radius: 3px;
+  color: $color-text;
+  cursor: pointer;
+  &:focus {
+    outline-width: 0;
+  }
+  &:hover {
+    background-color: $color_dark_pink;
+  }
+}

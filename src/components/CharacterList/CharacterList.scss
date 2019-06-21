@@ -1,5 +1,9 @@
 @import '../../styles/core/variables';
 
+.character__not--found {
+  text-align: center;
+}
+
 .character__list {
   display: flex;
   justify-content: center;
