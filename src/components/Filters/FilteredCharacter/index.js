@@ -28,7 +28,7 @@ class FilteredCharacter extends Component {
           charactersFound={
             allCharacters
               .filter(character => character.heroName.toLowerCase().includes(value))
-              //.sort(character.heroName) 
+              .sort((a, b) => (a.heroName > b.heroName) ? 1 : ((b.heroName > a.heroName)) ? -1 : 0)
           }
         />
       </Fragment>
