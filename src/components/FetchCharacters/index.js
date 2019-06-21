@@ -7,12 +7,11 @@ class FetchCharacters extends Component {
     super(props);
     this.state = {
       allCharacters: []
-    }
+    };
     this.getCharacters = this.getCharacters.bind(this);
   }
 
-  getCharacters(event) {
-    event.preventDefault();
+  getCharacters() {
     //fetchMarvelCharacters('Spider')
     fetchMarvelCharacters()
       .then(data => {

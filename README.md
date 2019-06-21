@@ -42,6 +42,7 @@ nunca lo había hecho
   |_styles
     |_core
       |_variables
+      |_mixins
 ```
 
 Global state controlled from App.js
@@ -63,6 +64,7 @@ Maquetación
 *Use of BEM for class naming
 *Responsive with Mobile first
 *Flexbox
+*Transitions
 *Scroll horizontal para imagenes con librería? En vista ppal
 
 ---
@@ -70,7 +72,13 @@ mapeo en fetch
 funciones arrow en componentes
 sort
 button con mixing
-fetch to local json
+TO DO:
+renderizar lista solo cuando doy al botón
+o que el value solo se guarde cuando doy al botón
+esto es nuevo para mi
+
+boton para ver todos los caracterres, y el normal que devuelva vacio si no hay nada en input
+
 ---
 
 ## Dificultades

@@ -1,13 +1,65 @@
+@import '../../styles/core/variables';
+
+.character__not--found {
+  text-align: center;
+}
+
 .character__list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   list-style: none;
-  margin: 0;
+  margin: 10px 0 60px 0;
   padding: 0;
-  //width: 200px;
 }
 
 .character__card {
-  
+  background-color: $color_white;
+  width: 300px;
+  height: 500px;
+  overflow: hidden;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform ease 1s;
+  &:hover {
+    transform: translate(0, -10px);
+    background-color: $color_secondary;
+    color: $color_white;
+    .card__image {
+      width: 110%;
+    }
+  }
+}
+
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card__image {
+  display: flex;
+  align-self: center;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 5px 5px 0 0;
+  transition: width ease 1s;
+}
+
+.card__text--wrapper {
+  padding: 0 10px;
+}
+
+.card__title {
+  font-size: $font_size_title;
+  text-transform: uppercase;
+}
+
+.card__description {
+  font-size: $font_size_medium;
 }
