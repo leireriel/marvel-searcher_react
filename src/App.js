@@ -19,9 +19,9 @@ class App extends Component {
               </Fragment>
             }/>
 
-            <Route path="/character/:character" render={paramPicker =>
+            <Route path="/character/:character" render={idPicker =>
               <CharacterDetail
-                param={parseInt(paramPicker.match.params.character)}
+                id={parseInt(idPicker.match.params.character)}
               />
             }/>
 

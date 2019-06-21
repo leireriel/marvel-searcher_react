@@ -38,7 +38,6 @@ const mapToSingleCharacter = character => {
     {
       id: character.id,
       heroName: character.names.hero_name,
-      text: character.abstract,
       image: character.avatar,
       realName: character.names.real_name,
       group: character.group,

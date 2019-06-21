@@ -37,6 +37,7 @@ nunca lo había hecho
     |_Search
     |_CharacterList
     |_CharacterDetail
+      |_NavDetail
     |_Contact
   
   |_styles

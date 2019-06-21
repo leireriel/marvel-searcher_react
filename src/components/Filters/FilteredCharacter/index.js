@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Search from '../../Search';
 import CharacterList from '../../CharacterList';
-import './FilteredCharacter.scss';
 
 class FilteredCharacter extends Component {
   constructor(props) {
@@ -72,15 +71,15 @@ class FilteredCharacter extends Component {
           actionValue={this.handleValue}
           actionButtonAll={this.handleClickButtonAll}
         />
-        {clickedButton & value !== '' ?
+        {clickedButton && value !== '' ?
           <CharacterList 
             value={value}
             clickedButton={clickedButton}
             charactersFound={charactersFound}
           />
           :
-          clickedButton & value === '' ?
-          <p className="error__text">
+          clickedButton && value === '' ?
+          <p className="common__text--center">
             Escribe algo
             <span role="img" aria-label="friendly face">😉</span>
           </p>

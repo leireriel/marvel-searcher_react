@@ -1,9 +1,5 @@
 @import '../../styles/core/variables';
 
-.character__not--found {
-  text-align: center;
-}
-
 .character__list {
   display: flex;
   justify-content: center;
@@ -25,10 +21,17 @@
   &:hover {
     transform: translate(0, -10px);
     background-color: $color_secondary;
-    color: $color_white;
     .card__image {
       width: 110%;
     }
+  }
+}
+
+.card__link {
+  text-decoration: none;
+  color: $color_secondary;
+  &:hover {
+    color: $color_white;
   }
 }
 
