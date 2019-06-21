@@ -49,14 +49,14 @@ I was used to using a global state, but this week I learned that in some cases i
 In this project there are **two routes**:
 1. One as the home route (that contains the list of characters)
 2. And the detail route (created with the id of the character when the user clicks on it).
+
 Since both routes contain components that make a different fetch, it was not neccesary to store the array of characters in the global state (as I was used to).
 
-It was a challenge for me to make requests to an API using **authentication** (although later I could not use it). I've also made **mock** and **fetch to a local json** for the first time.
+It was a challenge for me to make requests to an API using **authentication** (although later I could not use it). I've also made a **mock** and **fetch to a local json** for the first time.
 
 ## 🗂 Dependencies
 * [react](https://www.npmjs.com/package/react) - Framework of the project ⚛ 
 * [react-router-dom](https://www.npmjs.com/package/react-router-dom) - For routing :)
-* [react-router-hash-link](https://www.npmjs.com/package/react-router-hash-link) - To create anchor tag in react router
 * [prop-types](https://www.npmjs.com/package/prop-types) - A way to dynamically verify the props of our components
 * [node-sass](https://www.npmjs.com/package/node-sass) - For the use of SCSS in the project
 
