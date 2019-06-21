@@ -1,0 +1,233 @@
+{
+  "characters": [
+    {
+      "id": 1110,
+      "names": {
+        "hero_name": "Ant-Man",
+        "real_name": [
+          "Hank Pym",
+          "Scott Lang",
+          "Eric O'Grady"
+          ]
+      },
+      "group": {
+        "has_group": true,
+        "name_group": "Avengers"
+      },
+      "measures": {
+        "height": 1.89,
+        "height_unit": "centimeters",
+        "weight": 123,
+        "weight_unit": "pounds"
+      },
+      "abstract": "Dr. Hank Pym creates the Pym Particle, which allows the user to alter their size or mass, greatly changing the landscape of super heroics with his invention. He uses his brilliance to fight first as Ant-Man, and then under many more monikers.",
+      "comics": [
+        {
+          "id": 100,
+          "number": 27,
+          "name": "Tales to Astonish",
+          "month": "january",
+          "year": 1962
+        },
+        {
+          "id": 101,
+          "number": 12,
+          "name": "Tales to Something",
+          "month": "june",
+          "year": 1971
+        }
+      ],
+      "mother": null,
+      "father": null,
+      "avatar": "https://terrigen-cdn-dev.marvel.com/content/prod/1x/010ant_com_crd_01.jpg",
+      "dob": "1997-07-16T19:20:30.45+01:00"
+    },
+    {
+      "id": 1111,
+      "names": {
+        "hero_name": "Jessica Jones",
+        "real_name": [
+          "Jessica Campbell Jones"
+          ]
+      },
+      "group": {
+        "has_group": true,
+        "name_group": "New Avengers"
+      },
+      "measures": {
+        "height": 1.79,
+        "height_unit": "centimeters",
+        "weight": 112,
+        "weight_unit": "pounds"
+      },
+      "abstract": "Overcoming her difficult past, Jessica Jones works as one of the finest Private Investigators in New York City. Her firm, Alias Investigations, was born out of her unmatched street smarts and her personal drive for justice.",
+      "comics": [
+        {
+          "id": 100,
+          "number": 1,
+          "name": "Alias",
+          "month": "june",
+          "year": 2006
+        },
+        {
+          "id": 101,
+          "number": 2,
+          "name": "Alias Something",
+          "month": "september",
+          "year": 2007
+        }
+      ],
+      "mother": null,
+      "father": null,
+      "avatar": "https://terrigen-cdn-dev.marvel.com/content/prod/1x/027jjo_com_crd_01.jpg",
+      "dob": "1982-02-12T13:20:30.45+01:00"
+    },
+    {
+      "id": 1112,
+      "names": {
+        "hero_name": "Spider-Man",
+        "real_name": [
+          "Peter Parker",
+          "Miles Morales"
+          ]
+      },
+      "group": {
+        "has_group": false,
+        "name_group": null
+      },
+      "measures": {
+        "height": 1.59,
+        "height_unit": "centimeters",
+        "weight": 106,
+        "weight_unit": "pounds"
+      },
+      "abstract": "In the alternate reality of Earth-1610, a young New York City teen was bitten by a genetically enhanced spider. When the Peter Parker of that dimension was killed, the teen—named Miles Morales—was inspired to take up the fallen mantle.",
+      "comics": [
+        {
+          "id": 100,
+          "number": 15,
+          "name": "Amazing Fantasy",
+          "month": "may",
+          "year": 1993
+        },
+        {
+          "id": 101,
+          "number": 54,
+          "name": "Amazing Fantasy II",
+          "month": "july",
+          "year": 1993
+        },
+        {
+          "id": 102,
+          "number": 23,
+          "name": "Fantasy Something",
+          "month": "october",
+          "year": 2007
+        }
+      ],
+      "mother": "Mary Parker",
+      "father": "Richard Parker",
+      "avatar": "https://terrigen-cdn-dev.marvel.com/content/prod/1x/037smm_com_crd_01.jpg",
+      "dob": "1978-12-22T13:20:50.45+01:00"
+    },
+    {
+      "id": 1113,
+      "names": {
+        "hero_name": "Captain Marvel",
+        "real_name": [
+          "Carol Danvers"
+          ]
+      },
+      "group": {
+        "has_group": false,
+        "name_group": null
+      },
+      "measures": {
+        "height": 1.89,
+        "height_unit": "centimeters",
+        "weight": 136,
+        "weight_unit": "pounds"
+      },
+      "abstract": "Near death, Carol Danvers was transformed into a powerful warrior for the Kree. Now, returning to Earth years later, she must remember her past in order to to prevent a full invasion by shapeshifting aliens, the Skrulls.",
+      "comics": [
+        {
+          "id": 100,
+          "number": 5,
+          "name": "Amazing Marvel",
+          "month": "may",
+          "year": 2101
+        }
+      ],
+      "mother": null,
+      "father": null,
+      "avatar": "https://terrigen-cdn-dev.marvel.com/content/prod/1x/008cmv_com_crd_01.jpg",
+      "dob": "1998-10-04T03:20:50.45+01:00"
+    },
+    {
+      "id": 1114,
+      "names": {
+        "hero_name": "Thor Odinson",
+        "real_name": [
+          "Donald J. Blake"
+          ]
+      },
+      "group": {
+        "has_group": true,
+        "name_group": "Avengers"
+      },
+      "measures": {
+        "height": 2.09,
+        "height_unit": "centimeters",
+        "weight": 156,
+        "weight_unit": "pounds"
+      },
+      "abstract": "Thor Odinson wields the power of the ancient Asgardians to fight evil throughout the Nine Realms and beyond.",
+      "comics": [
+        {
+          "id": 100,
+          "number": 1,
+          "name": "Amazing Thor",
+          "month": "august",
+          "year": 2015
+        }
+      ],
+      "mother": null,
+      "father": "Odin",
+      "avatar": "https://terrigen-cdn-dev.marvel.com/content/prod/1x/004tho_com_crd_01.jpg",
+      "dob": "1972-03-15T04:20:50.45+01:00"
+    },
+    {
+      "id": 1115,
+      "names": {
+        "hero_name": "Gamora",
+        "real_name": [
+          "Gamora Zen Whoberi Ben Titan"
+          ]
+      },
+      "group": {
+        "has_group": true,
+        "name_group": "Guardians of the Calaxy"
+      },
+      "measures": {
+        "height": 1.19,
+        "height_unit": "centimeters",
+        "weight": 156,
+        "weight_unit": "pounds"
+      },
+      "abstract": "Gamora is a trained warrior assassin, whose life under her adoptive father Thanos’ torturous wrath leads her to turn against him. Realizing the universe is threatened by powerful Infinity Stones, she takes up the mantle of Guardian of the Galaxy.",
+      "comics": [
+        {
+          "id": 100,
+          "number": 15,
+          "name": "Marvel Comics",
+          "month": "august",
+          "year": 2008
+        }
+      ],
+      "mother": null,
+      "father": "Thanos",
+      "avatar": "https://terrigen-cdn-dev.marvel.com/content/prod/1x/022gam_com_crd_01.jpg",
+      "dob": "1988-04-15T13:20:50.45+01:00"
+    }
+  ]
+}
