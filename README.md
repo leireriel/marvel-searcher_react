@@ -24,10 +24,10 @@ Install [Node.js](https://nodejs.org/), and then:
     |_mockCharacters.json
 
   |_components
-    |_Search
     |_FetchCharacters
     |_Filters
       |_FilteredCharacter
+    |_Search
     |_CharacterList
     |_CharacterDetail
       |_NavDetail
@@ -51,6 +51,8 @@ In this project there are **two routes**:
 2. And the detail route (created with the id of the character when the user clicks on it).
 Since both routes contain components that make a different fetch, it was not neccesary to store the array of characters in the global state (as I was used to).
 
+It was a challenge for me to make requests to an API using **authentication** (although later I could not use it). I've also made **mock** and **fetch to a local json** for the first time.
+
 ## 🗂 Dependencies
 * [react](https://www.npmjs.com/package/react) - Framework of the project ⚛ 
 * [react-router-dom](https://www.npmjs.com/package/react-router-dom) - For routing :)
@@ -65,39 +67,32 @@ Since both routes contain components that make a different fetch, it was not nec
 2. Programming (JS / React)
 * Use of some **React component lifecycle** methods
 * Use of **React Router** to simulate pages
-* Use of **PropTypes**
-*? to fetch local json primer vex
-hacer mejor organizacion componentes
+* Use of **React PropTypes**
 
-Maquetación
-*SASS
-*Use of BEM for class naming
-*Responsive with Mobile first
-*Flexbox
-*Transitions
-*Scroll horizontal para imagenes con librería? En vista ppal
+3. Layout
+* **SASS**
+* **Variables, mixins, animations and transitions**
+* **Responsive** design 
+* **Mobile First**
+* **Flexbox**
+* Use of **BEM** for class naming
 
----
-mapeo en fetch
-funciones arrow en componentes
-sort
-button con mixing
-TO DO:
-renderizar lista solo cuando doy al botón
-o que el value solo se guarde cuando doy al botón
-esto es nuevo para mi
-
-boton para ver todos los caracterres, y el normal que devuelva vacio si no hay nada en input
-
-TO IMPROVE (asynchrony???):
-
-1. The button to see all characters only works after pressing the other button.
-2. Avoid render every time the user is typing. It has to happen just when user press button.
-shouldComponentUpdate should work, but it's making a delay. I think it's something about asynchrony.
-
----
 ## 💡 To Do
+* **Better control the rendering**. Render the list of characters in CharacterList component only when the button is clicked. I think I'm having some kind of *asynchrony* with the state when clicking the button (double answer receipt). shouldComponentUpdate should work, but I think it's making a delay because of this docuble answer.
+* Make it possible to **click the "Ver todos los personajes" button in first place**. It only works if we have clicked first the small one.
+* Improve **organization of components** for first route (includes components FetchCharacters, FilteredCharacter, Search and CharacterList). Maybe this components should be organized in hierarchy, instead of in the same level. I need to document about strategies to organize components.
+* Real **fetch to Marvel API**.
+* **Horizontal scroll** to see the characters in the list component.
 
 ## 👨‍🏫 Attribution
 1. Images of characters are from [Marvel website](https://www.marvel.com/explore).
 2. Favicon got in [IconArchive](http://www.iconarchive.com/show/ultrabuuf-icons-by-mattahan/Comics-Spiderwoman-icon.html).
+
+# 🤜🤛 Contributing
+All suggestions are welcome, please open an issue.
+Thank you 💜
+
+## 🙏🏿 Acknowledgments 
+Thank you Matías for giving me a fun exercise. Although I went crazy when the api was not working, I learned a lot doing the test! 🤯
+
+And thanks everyone for reading! :)
