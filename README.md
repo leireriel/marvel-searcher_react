@@ -63,6 +63,7 @@ Maquetación
 *Use of BEM for class naming
 *Responsive with Mobile first
 *Flexbox
+*Transitions
 *Scroll horizontal para imagenes con librería? En vista ppal
 
 ---
