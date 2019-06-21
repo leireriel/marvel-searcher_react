@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import './PaintDetail.scss';
 
 const PaintDetail = ({ characterToRender }) => {
@@ -56,7 +57,7 @@ const PaintDetail = ({ characterToRender }) => {
                   <li className="detail__common--text">
                     <ol className="detail__comics detail__common--list">
                       {character.comics.length > 1 ?
-                      'Sale en todos estos comics: '
+                      `Sale en estos ${character.comics.length} comics: `
                       :
                       'Sale en este comic: '
                       }
@@ -72,5 +73,9 @@ const PaintDetail = ({ characterToRender }) => {
     </Fragment>
   );
 }
+
+PaintDetail.propTypes = {
+  characterToRender: PropTypes.array,
+};
 
 export default PaintDetail;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Search.scss';
 
 const Search = ({ actionButton, actionValue, actionButtonAll }) => {
@@ -21,5 +22,11 @@ const Search = ({ actionButton, actionValue, actionButtonAll }) => {
     </div>
   );
 }
+
+Search.propTypes = {
+  actionButton: PropTypes.func,
+  actionValue: PropTypes.func,
+  actionButtonAll: PropTypes.func,
+};
 
 export default Search;

@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Search from '../../Search';
 import CharacterList from '../../CharacterList';
+import PropTypes from 'prop-types';
 
 class FilteredCharacter extends Component {
   constructor(props) {
@@ -17,13 +18,10 @@ class FilteredCharacter extends Component {
   
   shouldComponentUpdate() {
     if (this.state.clickedButton) {
-      console.log('true')
       return true;
     } else {
-      console.log('false')
       return false;
     }
-    //Problema de asincronía
   }
 
   handleValue(event) {
@@ -95,5 +93,10 @@ class FilteredCharacter extends Component {
     );
   }
 }
+
+FilteredCharacter.propTypes = {
+  actionFetch: PropTypes.func,
+  allCharacters: PropTypes.array,
+};
 
 export default FilteredCharacter;

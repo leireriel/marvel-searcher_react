@@ -1,64 +1,73 @@
-# Welcome to the Marvel characters searcher!!
+# Welcome to this MARVEL CHARACTERS SEARCHER!!
 
-## What is this APP for...
-:)
+![Screenshot of app](./src/images/project_screenshot.PNG)
 
-## Attribution
-You must attribute Marvel as the source of data whenever you display any results from the Marvel Comics API. Please use the following text on every application screen or web page which displays the API result:
-"Data provided by Marvel. © 2014 Marvel"
+## 🤖 What is this APP for...
+This is a SPA created with **React JS** to search characters from [Marvel API](https://developer.marvel.com/). You can also see the detail of the character selected.
 
-API https://developer.marvel.com/
+## 👀 Before starting
+Because the API was down during the days I did this project, I decided to mock a json with some characters, which is now located in this repository (src/services). Sorry if the data isn't real! 🙈
 
-Marvel Comics API is a RESTful service
+## 🏗 Getting Started
+Install [Node.js](https://nodejs.org/), and then:
+1. `$ git clone https://github.com/leireriel/marvel-searcher-react.git` to clone the repository
+2. `$ npm install` to install dependencies 
+3. `$ npm start` to run the project in your browser 
 
-See how on https://developer.marvel.com/documentation/getting_started
-- Get a key
-
-Necesitas key, timestamp (ts) y hash para peticiones https://developer.marvel.com/documentation/authorization
-
-
-catch error?`
-
---
-API timeout
-Mock json
-images of characters from https://www.marvel.com/explore
-nunca lo había hecho
-
-## Structure
+## 🖇 Structure
 ```
 |_src
   |_App
 
   |_services
     |_fetchCharacters
+    |_mockCharacters.json
 
   |_components
     |_Search
+    |_FetchCharacters
+    |_Filters
+      |_FilteredCharacter
     |_CharacterList
     |_CharacterDetail
       |_NavDetail
+      |_PaintDetail
     |_Contact
   
   |_styles
     |_core
       |_variables
       |_mixins
+
+  |_images
 ```
 
-Global state controlled from App.js
-or state in new component fetch, that contains both search and characterlist
+## 💪 Challenges
+This project has been created during three days in which I have learned many things.
+I was used to using a global state, but this week I learned that in some cases it may be better to control the **states in each component**.
 
-## Dependencies and technologies
-Petitions
-*Postman help
+In this project there are **two routes**:
+1. One as the home route (that contains the list of characters)
+2. And the detail route (created with the id of the character when the user clicks on it).
+Since both routes contain components that make a different fetch, it was not neccesary to store the array of characters in the global state (as I was used to).
 
-Developement(?)
-*This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-*Métodos de vida: component did mount, etc
-*React Router
-*PropTypes
-*? to fetch local json
+## 🗂 Dependencies
+* [react](https://www.npmjs.com/package/react) - Framework of the project ⚛ 
+* [react-router-dom](https://www.npmjs.com/package/react-router-dom) - For routing :)
+* [react-router-hash-link](https://www.npmjs.com/package/react-router-hash-link) - To create anchor tag in react router
+* [prop-types](https://www.npmjs.com/package/prop-types) - A way to dynamically verify the props of our components
+* [node-sass](https://www.npmjs.com/package/node-sass) - For the use of SCSS in the project
+
+## 👩🏼‍💻 Technologies
+1. API
+* [Postman](https://www.getpostman.com/) to make petitions to API
+
+2. Programming (JS / React)
+* Use of some **React component lifecycle** methods
+* Use of **React Router** to simulate pages
+* Use of **PropTypes**
+*? to fetch local json primer vex
+hacer mejor organizacion componentes
 
 Maquetación
 *SASS
@@ -87,8 +96,8 @@ TO IMPROVE (asynchrony???):
 shouldComponentUpdate should work, but it's making a delay. I think it's something about asynchrony.
 
 ---
+## 💡 To Do
 
-## Dificultades
-
-
-favicon got in http://www.iconarchive.com/show/ultrabuuf-icons-by-mattahan/Comics-Spiderwoman-icon.html
+## 👨‍🏫 Attribution
+1. Images of characters are from [Marvel website](https://www.marvel.com/explore).
+2. Favicon got in [IconArchive](http://www.iconarchive.com/show/ultrabuuf-icons-by-mattahan/Comics-Spiderwoman-icon.html).

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './NavDetail.scss';
 
 const NavDetail = ({ id, title }) => {
@@ -19,5 +20,10 @@ const NavDetail = ({ id, title }) => {
     </div>
   );
 }
+
+NavDetail.propTypes = {
+  id: PropTypes.number,
+  title: PropTypes.array,
+};
 
 export default NavDetail;

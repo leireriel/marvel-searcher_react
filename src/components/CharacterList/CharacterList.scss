@@ -43,9 +43,12 @@
   padding: 0;
 }
 
-.card__image {
+.card__image--wrapper {
   display: flex;
-  align-self: center;
+  justify-content: center;
+}
+
+.card__image {
   width: 100%;
   height: 300px;
   object-fit: cover;
