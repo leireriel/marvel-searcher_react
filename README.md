@@ -16,7 +16,7 @@ Es necesario tener instalado [Node.js](https://nodejs.org/), y después:
 2. `$ npm install` para instalar las dependencias
 3. `$ npm start` para arrancar la app en el navegador 
 
-## 🖇 Estructura y componentes
+## ⛩ Estructura y componentes
 ```
 |_src
   |_App
@@ -72,7 +72,7 @@ Programación (JS / React)
 * Uso de **React Router** para simular la navegación por páginas
 * Uso de **React PropTypes**
 
-Layout
+Maquetación
 * **SASS**
 * **Variables, mixins, animaciones y transiciones**
 * Diseño **responsive** 
