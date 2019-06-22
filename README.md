@@ -1,22 +1,22 @@
-# Welcome to this MARVEL CHARACTERS SEARCHER!!
+# BUSCADOR DE PERSONAJES DE MARVEL
 
 ![Screenshot of app](./src/images/project_screenshot.PNG)
 
-Link to app --> https://leireriel.github.io/marvel-searcher_react/#/
+Enlace a la app --> https://leireriel.github.io/marvel-searcher_react/#/
 
-## 🤖 What is this APP for...
-This is a SPA created with **React JS** to search characters from [Marvel API](https://developer.marvel.com/). You can also see the detail of the character selected.
+## 🤖 ¿Qué es esto?
+Es una SPA (Single Page Application) creada con **React JS** para buscar personajes de la [API de Marvel](https://developer.marvel.com/). También se puede ver el detalle del personaje seleccionado, que contiene información adicional.
 
-## 👀 Before starting
-Because the API was down during the days I did this project, I decided to mock a json with some characters, which is now located in this repository (src/services). Sorry if the data isn't real! 🙈
+## 👀 ¡Nota importante!
+El servidor de Marvel estuvo caído durante los días en los que hice la prueba, y la API funcionaba mal. Por este motivo decidí mockear un json con algunos personajes. El mock está incluido en este repositorio (src/services).
 
 ## 🏗 Getting Started
-Install [Node.js](https://nodejs.org/), and then:
-1. `$ git clone https://github.com/leireriel/marvel-searcher_react.git` to clone the repository
-2. `$ npm install` to install dependencies 
-3. `$ npm start` to run the project in your browser 
+Es necesario tener instalado [Node.js](https://nodejs.org/), y después:
+1. `$ git clone https://github.com/leireriel/marvel-searcher_react.git` para clonar el repositorio
+2. `$ npm install` para instalar las dependencias
+3. `$ npm start` para arrancar la app en el navegador 
 
-## 🖇 Structure
+## 🖇 Estructura y componentes
 ```
 |_src
   |_App
@@ -44,57 +44,52 @@ Install [Node.js](https://nodejs.org/), and then:
   |_images
 ```
 
-## 💪 Challenges
-This project has been created during three days in which I have learned many things.
-I was used to using a global state, but this week I learned that in some cases it may be better to control the **states in each component**.
+## 💪 Retos y soluciones
+Durante los 3 días que he dedicado a hacer este proyecto, he aprendido muchas cosas.
+Hasta ahora estaba acostumbrada a usar un estado global, pero esta semana aprendí la utilidad de controlar los **estados en cada componente** para evitar la sobrecarga del componente madre.
 
-In this project there are **two routes**:
-1. One as the home route (that contains the list of characters)
-2. And the detail route (created with the id of the character when the user clicks on it).
+En este proyecto hay **dos rutas**:
+1. La home (que contiene el listado de personajes y el buscador)
+2. La vista de detalle (que se genera dinámicamente con el id del personaje sobre el que haces click).
 
-Since both routes contain components that make a different fetch, it was not neccesary to store the array of characters in the global state (as I was used to).
+Como dentro de cada ruta se hace un fetch diferente, me pareció una buena idea probar a hacer estados locales para cada ruta. En la primera se almacena el array de personajes y en la segunda el personaje para ver en detalle.
 
-It was a challenge for me to make requests to an API using **authentication** (although later I could not use it). I've also made a **mock** and **fetch to a local json** for the first time.
+También ha sido la primera vez que hago peticiones a una API usando **autenticación**, y la primera vez que hago un **mock** y un **fetch a un json almacenado en local**.
 
-## 🗂 Dependencies
-* [react](https://www.npmjs.com/package/react) - Framework of the project ⚛ 
-* [react-router-dom](https://www.npmjs.com/package/react-router-dom) - For routing :)
-* [prop-types](https://www.npmjs.com/package/prop-types) - A way to dynamically verify the props of our components
-* [node-sass](https://www.npmjs.com/package/node-sass) - For the use of SCSS in the project
+## 🗂 Dependencias
+* [react](https://www.npmjs.com/package/react) - Librería de JavaScript usada en el proyecto ⚛ 
+* [react-router-dom](https://www.npmjs.com/package/react-router-dom) - Para las rutas
+* [prop-types](https://www.npmjs.com/package/prop-types) - Para verificar el tipado de las props
+* [node-sass](https://www.npmjs.com/package/node-sass) - Para usar SCSS
 
-## 👩🏼‍💻 Technologies
+## 👩🏼‍💻 Qué tecnologías he usado
 API
-* [Postman](https://www.getpostman.com/) to make petitions to API
+* [Postman](https://www.getpostman.com/) me ha ayudado con las peticiones a la API
 
-Programming (JS / React)
-* Use of some **React component lifecycle** methods
-* Use of **React Router** to simulate pages
-* Use of **React PropTypes**
+Programación (JS / React)
+* Uso de algunos métodos de **ciclos de vida** para los componentes de React
+* Uso de **React Router** para simular la navegación por páginas
+* Uso de **React PropTypes**
 
 Layout
 * **SASS**
-* **Variables, mixins, animations and transitions**
-* **Responsive** design 
+* **Variables, mixins, animaciones y transiciones**
+* Diseño **responsive** 
 * **Mobile First**
 * **Flexbox**
-* Use of **BEM** for class naming
+* Uso de **BEM** para el nombrado de clases
 
 ## 💡 To Do
-1. **Better control the rendering**. Render the list of characters in CharacterList component only when the button is clicked. I think I'm having some kind of *asynchrony* with the state when clicking the button (double answer receipt). shouldComponentUpdate should work, but I think it's making a delay because of this docuble answer.
-2. Make it possible to **click the "Ver todos los personajes" button in first place**. It only works if we have clicked first the small one.
-3. Improve **organization of components** for first route (includes components FetchCharacters, FilteredCharacter, Search and CharacterList). Maybe this components should be organized in hierarchy, instead of in the same level. I need to document about strategies to organize components.
-4. Real **fetch to Marvel API**.
-5. **Horizontal scroll** to see the characters in the list component.
+1. **Controlar mejor el rendering**. Renderizar la lista de personajes del componente CharacterList solo al hacer click en el botón de búsqueda. Creo que estoy teniendo algún problema de *asincronía* con el estado cuando hago click en este botón. Al usar el método shouldComponentUpdate recibo una doble respuesta y creo que está interfiriendo de alguna forma con el estado.
+2. Conseguir que se pueda **clickar el botón "Ver todos los personajes" desde el principio**. Sólo funciona si has presionado antes el botón de búsqueda que acompaña al input.
+3. Mejorar la **organización de componentes** para la primera ruta (incluye los componentes FetchCharacters, FilteredCharacter, Search y CharacterList). Creo que la arquitectura sería más legible si todos los componentes de esta primera ruta estuvieran organizados en jerarquía, uno dentro de otro, según van siendo requeridos. A pesar de esto me he decidido a dejarlos en el mismo nivel porque creo que la estructura se complicada innecesariamente encapsulándolos todos uno dentro de otro. Tengo que documentarme más sobre estrategias para organizar componentes.
+4. ¡Hacer por fin el **fetch a la API de Marvel**!.
+5. Idea: evento para cambiar el scroll por defecto (vertical) a **Scroll horizontal** para ver la lista de personajes de la primera ruta. Tendría que poner "flex-wrap: nowrap".
 
-## 👨‍🏫 Attribution
-* Images of characters are from [Marvel website](https://www.marvel.com/explore).
-* Favicon got in [IconArchive](http://www.iconarchive.com/show/ultrabuuf-icons-by-mattahan/Comics-Spiderwoman-icon.html).
+## 🎨 Attribution
+* Las imágenes de los personajes son de la [web de Marvel](https://www.marvel.com/explore).
+* El favicon es de [IconArchive](http://www.iconarchive.com/show/ultrabuuf-icons-by-mattahan/Comics-Spiderwoman-icon.html).
 
-# 🤜🤛 Contributing
-All suggestions are welcome, please open an issue.
-Thank you 💜
-
-## 🙏🏿 Acknowledgments 
-Thank you Matías for giving me a fun exercise. Although I went crazy when the api was not working, I learned a lot doing the test! 🤯
-
-And thanks everyone for reading! :)
+# 🤜🤛 Sugerencias
+Todas las sugerencias son bienvenidas, puedes abrir una issue :)
+Gracias 💜
