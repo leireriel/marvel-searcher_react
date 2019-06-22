@@ -45,7 +45,7 @@ Es necesario tener instalado [Node.js](https://nodejs.org/), y después:
 ```
 
 ## 💪 Retos y soluciones
-Durante los 3 días que he dedicado a hacer este proyecto, he aprendido muchas cosas.
+Durante el tiempo que he dedicado a hacer este proyecto, he aprendido muchas cosas.
 Hasta ahora estaba acostumbrada a usar un estado global, pero esta semana aprendí la utilidad de controlar los **estados en cada componente** para evitar la sobrecarga del componente madre.
 
 En este proyecto hay **dos rutas**:
