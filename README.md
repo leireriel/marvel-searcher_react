@@ -2,6 +2,8 @@
 
 ![Screenshot of app](./src/images/project_screenshot.PNG)
 
+Link to app --> https://leireriel.github.io/marvel-searcher_react/#/
+
 ## 🤖 What is this APP for...
 This is a SPA created with **React JS** to search characters from [Marvel API](https://developer.marvel.com/). You can also see the detail of the character selected.
 
