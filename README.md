@@ -83,9 +83,9 @@ Maquetación
 ## 💡 To Do
 1. **Controlar mejor el rendering**. Renderizar la lista de personajes del componente CharacterList solo al hacer click en el botón de búsqueda. Creo que estoy teniendo algún problema de *asincronía* con el estado cuando hago click en este botón. Al usar el método shouldComponentUpdate recibo una doble respuesta y creo que está interfiriendo de alguna forma con el estado.
 2. Conseguir que se pueda **clickar el botón "Ver todos los personajes" desde el principio**. Sólo funciona si has presionado antes el botón de búsqueda que acompaña al input.
-3. Mejorar la **organización de componentes** para la primera ruta (incluye los componentes FetchCharacters, FilteredCharacter, Search y CharacterList). Creo que la arquitectura sería más legible si todos los componentes de esta primera ruta estuvieran organizados en jerarquía, uno dentro de otro, según van siendo requeridos. A pesar de esto me he decidido a dejarlos en el mismo nivel porque creo que la estructura se complicada innecesariamente encapsulándolos todos uno dentro de otro. Tengo que documentarme más sobre estrategias para organizar componentes.
-4. ¡Hacer por fin el **fetch a la API de Marvel**!.
-5. Idea: evento para cambiar el scroll por defecto (vertical) a **Scroll horizontal** para ver la lista de personajes de la primera ruta. Tendría que poner "flex-wrap: nowrap".
+3. Mejorar la **organización de componentes** para la primera ruta (incluye los componentes FetchCharacters, FilteredCharacter, Search y CharacterList). Creo que la arquitectura sería más legible si todos los componentes de esta primera ruta estuvieran organizados en jerarquía, uno dentro de otro, según van siendo requeridos. A pesar de esto me he decidido a dejarlos en el mismo nivel porque también pienso que la estructura se complica innecesariamente encapsulándolos todos uno dentro de otro. Tengo que documentarme más sobre estrategias para organizar componentes.
+4. ¡Hacer por fin el **fetch a la API de Marvel**!
+5. Idea: evento para cambiar el scroll por defecto (vertical) a **scroll horizontal** para ver la lista de personajes de la primera ruta. Tendría que poner "flex-wrap: nowrap".
 
 ## 🎨 Attribution
 * Las imágenes de los personajes son de la [web de Marvel](https://www.marvel.com/explore).
