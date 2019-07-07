@@ -1,94 +1,70 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
+
 import Search from '../../Search';
 import CharacterList from '../../CharacterList';
-import PropTypes from 'prop-types';
+
+import { orderCharacters } from '../../../utils/helpers';
 
 class FilteredCharacter extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      value: '',
-      clickedButton: false,
-      clickedAllButton: false
-    };
+    this.state = { value: '' };
+
     this.handleValue = this.handleValue.bind(this);
     this.handleCLickButton = this.handleCLickButton.bind(this);
     this.handleClickButtonAll = this.handleClickButtonAll.bind(this);
   }
-  
-  shouldComponentUpdate() {
-    if (this.state.clickedButton) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+
+  // TODO uncomment to load default characters after mounted
+  // componentDidMount() {
+  //   this.props.actionFetch();
+  // }
 
   handleValue(event) {
     const searchValue = event.currentTarget.value.toLowerCase();
-    this.setState({
-      value: searchValue,
-      clickedButton: false,
-      clickedAllButton: false
-    });
+
+    this.setState({ value: searchValue });
   }
-  
-  handleCLickButton(event) {
-    event.preventDefault();
+
+  handleCLickButton(e) {
+    e.preventDefault();
     this.props.actionFetch();
-    this.setState({
-      clickedButton: true,
-      clickedAllButton: false
-    });
   }
 
   handleClickButtonAll() {
     this.props.actionFetch();
-    this.setState({
-      clickedAllButton: true,
-      clickedButton: false
-    });
   }
 
   render() {
-    const { value, clickedButton, clickedAllButton } = this.state;
+    const { value, clickedButton } = this.state;
     const { allCharacters } = this.props;
-    const charactersFound =
-      allCharacters
-      .filter(character => character.heroName.toLowerCase().includes(value))
-      .sort((a, b) => (a.heroName > b.heroName) ? 1 : ((b.heroName > a.heroName)) ? -1 : 0)
-    ;
-    const charactersFoundAll =
-      allCharacters
-        .sort((a, b) => (a.heroName > b.heroName) ? 1 : ((b.heroName > a.heroName)) ? -1 : 0)
-    ;
-    return(
+    const charactersFound = allCharacters
+      .filter((character) => character.heroName.toLowerCase().includes(value))
+      .sort(orderCharacters);
+    const charactersFoundAll = allCharacters.sort(orderCharacters);
+
+    return (
       <Fragment>
-        <Search 
-          actionButton={this.handleCLickButton} 
+        <Search
+          actionButton={this.handleCLickButton}
           actionValue={this.handleValue}
           actionButtonAll={this.handleClickButtonAll}
         />
-        {clickedButton && value !== '' ?
-          <CharacterList 
-            value={value}
-            clickedButton={clickedButton}
-            charactersFound={charactersFound}
-          />
-          :
-          clickedButton && value === '' ?
+        <CharacterList
+          value={value}
+          clickedButton={clickedButton}
+          charactersFound={charactersFound}
+        />
+        {!value && (
           <p className="common__text--center">
             Escribe algo
-            <span role="img" aria-label="friendly face">😉</span>
+            <span role="img" aria-label="friendly face">
+              😉
+            </span>
           </p>
-          :
-          clickedAllButton ?
-          <CharacterList 
-            charactersFound={charactersFoundAll}
-          />
-          :
-          null
-        }
+        )}
+        <CharacterList charactersFound={charactersFoundAll} />
       </Fragment>
     );
   }
